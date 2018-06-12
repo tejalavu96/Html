@@ -1,0 +1,84 @@
+
+<h2>Contact Us</h2>
+<form action="http://www.SnapHost.com/captcha/send.aspx" id="ContactUsCaptchaWebForm" method="post" onsubmit="return ValidateForm(this);" target="_top">
+<input id="skip_WhereToSend" name="skip_WhereToSend" type="hidden" value="your@email.com" />
+<input id="skip_SnapHostID" name="skip_SnapHostID" type="hidden" value="RBH2T9JWC3Z9" />
+<input id="skip_WhereToReturn" name="skip_WhereToReturn" type="hidden" value="http://www.YourWebsiteAddress.com/ThankYouPage.htm" />
+<input id="skip_Subject" name="skip_Subject" type="hidden" value="Contact Us Form" />
+<input id="skip_ShowUsersIp" name="skip_ShowUsersIp" type="hidden" value="1" />
+<input id="skip_SendCopyToUser" name="skip_SendCopyToUser" type="hidden" value="1" />
+<script type="text/javascript">
+function ValidateForm(frm) {
+if (frm.FirstName.value == "") {alert('First name is required.');frm.FirstName.focus();return false;}
+if (frm.LastName.value == "") {alert('Last name is required.');frm.LastName.focus();return false;}
+if (frm.FromEmailAddress.value == "") {alert('Email address is required.');frm.FromEmailAddress.focus();return false;}
+if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) {alert('Please enter a valid email address.');frm.FromEmailAddress.focus();return false;}
+if (frm.Comments.value == "") {alert('Please enter comments or questions.');frm.Comments.focus();return false;}
+if (frm.skip_CaptchaCode.value == "") {alert('Enter web form code.');frm.skip_CaptchaCode.focus();return false;}
+return true; }
+function ReloadCaptchaImage(captchaImageId) {
+var obj = document.getElementById(captchaImageId);
+var src = '' + obj.src;
+obj.src = '';
+var date = new Date();
+var pos = src.indexOf('&rad=');
+if (pos >= 0) { src = src.substr(0, pos); }
+obj.src = src + '&rad=' + date.getTime();
+return false; }
+</script>
+<table border="0" cellpadding="5" cellspacing="0" width="520">
+<tr><td style="width:50%">First name*:<br />
+<input id="FirstName" name="FirstName" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+<td style="width:50%">Last name*:<br />
+<input id="LastName" name="LastName" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+</tr><tr>
+<td>Email address*:<br />
+<input id="FromEmailAddress" name="FromEmailAddress" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+<td>&nbsp;</td>
+</tr><tr>
+<td>Work phone number:<br />
+<input id="WorkPhoneNumber" name="WorkPhoneNumber" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+<td>Fax number:<br />
+<input id="FaxNumber" name="FaxNumber" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+</tr><tr>
+<td>Home phone number:<br />
+<input id="HomePhoneNumber" name="HomePhoneNumber" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+<td>Mobile phone number:<br />
+<input id="MobilePhoneNumber" name="MobilePhoneNumber" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+</tr><tr>
+<td colspan="2">Address:<br />
+<input id="Address" name="Address" type="text" maxlength="250" style="width:500px; border:1px solid #009900" /></td>
+</tr><tr>
+<td>City:<br />
+<input id="City" name="City" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+<td>State / Province / Region:<br />
+<input id="State" name="State" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+</tr><tr>
+<td>Country:<br />
+<input id="Country" name="Country" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+<td>ZIP / Postal code:<br />
+<input id="Zip" name="Zip" type="text" maxlength="60" style="width:240px; border:1px solid #009900" /></td>
+</tr><tr>
+<td colspan="2">Comments and questions*:<br />
+<textarea name="Comments" id="Comments" rows="7" cols="40" style="width:500px; border:1px solid #009900"></textarea></td>
+</tr><tr>
+<td colspan="2" align="center"> <br />
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" style="padding-bottom:18px;">
+<!-- Please check our ad-free ProCaptcha service:
+http://www.SnapHost.com/captcha/ProCaptchaOverview.aspx -->
+<a href="http://www.snaphost.com/captcha" alt="html codes" title="html codes">
+html codes</a></td></tr>
+<tr valign="top"><td> <i>Enter web form code*:</i>
+<input id="skip_CaptchaCode" name="skip_CaptchaCode" type="text" style="width:80px; border:1px solid #999999" maxlength="6" />
+</td><td>
+<a href="http://www.snaphost.com/captcha/ReadyForms/ContactUsExtendedForm.aspx"><img id="CaptchaImage" alt="Contact Us extended form" title="HTML code for Contact Us extended form"
+style="margin-left:20px; border:1px solid #999999"
+src="http://www.SnapHost.com/captcha/CaptchaImage.aspx?id=RBH2T9JWC3Z9&ImgType=2" /></a><br />
+<a href="#" onclick="return ReloadCaptchaImage('CaptchaImage');"><span style="font-size:12px;">reload image</span></a> </td></tr>
+</table> <br />
+* - required fields. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<input id="skip_Submit" name="skip_Submit" type="submit" value="Submit" />
+</td></tr>
+</table><br />
+</form>
